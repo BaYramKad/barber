@@ -1,0 +1,181 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+  *::-moz-selection {
+    background-color: #2ca081; }
+  *::selection {
+    background-color: #2ca081; }
+
+ul li {
+  list-style-type: none;
+  cursor: pointer; }
+
+a {
+  text-decoration: none;
+  cursor: pointer; }
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer; }
+
+html {
+  scroll-behavior: smooth; }
+
+body {
+  font-family: 'Rubik', sans-serif;
+  background: #232323; }
+
+.container {
+  width: 1200px;
+  margin: 40px auto; }
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .header_navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-column-gap: 50px;
+            column-gap: 50px; }
+    .header_navigation ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-column-gap: 30px;
+              column-gap: 30px;
+      color: #b1b1b1; }
+      .header_navigation ul li {
+        -webkit-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out; }
+        .header_navigation ul li:hover {
+          color: #40b3e0;
+          -webkit-transition: all 0.25s ease-in-out;
+          transition: all 0.25s ease-in-out; }
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 35px; }
+  .main_content h1 {
+    font-size: 51px;
+    color: white; }
+    .main_content h1::first-line {
+      color: #dcfe50; }
+  .main_content p {
+    margin-top: 35px;
+    font-size: 21px;
+    color: #b1b1b1;
+    line-height: 160%; }
+  .main_content button {
+    margin-top: 35px;
+    padding: 15px 35px;
+    border: 2px solid #40b3e0;
+    color: #fff;
+    font-family: Jura;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 10px;
+            column-gap: 10px;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out; }
+    .main_content button:hover {
+      -webkit-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out;
+      -webkit-box-shadow: 0px 0px 18px 3px #40b3e095;
+              box-shadow: 0px 0px 18px 3px #40b3e095; }
+
+.portfolio-title {
+  text-align: center;
+  margin: 40px 40px;
+  color: white; }
+
+.slider-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border: 2px solid #fff;
+  overflow: hidden;
+  min-height: 549px; }
+  .slider-container button {
+    position: absolute;
+    color: white;
+    z-index: 4;
+    font-size: 30px; }
+    .slider-container button svg {
+      width: 50px;
+      height: 50px; }
+      .slider-container button svg path {
+        -webkit-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out; }
+    .slider-container button:hover svg path {
+      stroke: #dcfe50; }
+    .slider-container button.prev_btn {
+      top: 50%;
+      left: 20px;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%); }
+    .slider-container button.next_btn {
+      top: 50%;
+      right: 20px;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%); }
+
+.portfolio-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%; }
+
+.portfolio-img {
+  position: absolute;
+  width: 400px;
+  opacity: 0;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out; }
+
+.portfolio-img.active {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0); }
+
+/*# sourceMappingURL=index.css.map */

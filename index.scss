@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  &::selection {
+    background-color: #2ca081;
+  }
+}
+
+ul {
+  li {
+    list-style-type: none;
+    cursor: pointer;
+  }
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+$BcBody: #232323;
+$ColorText: #dcfe50;
+$ColorTextDefault: #b1b1b1;
+$HoverColor: #40b3e0;
+
+$Transition: all 0.25s ease-in-out;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  background: $BcBody;
+}
+
+.container {
+  width: 1200px;
+  margin: 40px auto;
+}
+
+.header {
+  display: flex;
+  color: white;
+  justify-content: center;
+
+  &_navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 50px;
+
+    ul {
+      display: flex;
+      column-gap: 30px;
+      color: $ColorTextDefault;
+
+      li {
+        transition: $Transition;
+        &:hover {
+          color: $HoverColor;
+          transition: $Transition;
+        }
+      }
+    }
+  }
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 35px;
+
+  &_content {
+    h1 {
+      font-size: 51px;
+      color: white;
+      &::first-line {
+        color: $ColorText;
+      }
+    }
+    p {
+      margin-top: 35px;
+      font-size: 21px;
+      color: $ColorTextDefault;
+      line-height: 160%;
+    }
+    button {
+      margin-top: 35px;
+      padding: 15px 35px;
+      border: 2px solid $HoverColor;
+      color: #fff;
+      font-family: Jura;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 400;
+      display: flex;
+      column-gap: 10px;
+      transition: $Transition;
+      &:hover {
+        transition: $Transition;
+        box-shadow: 0px 0px 18px 3px #40b3e095;
+      }
+    }
+  }
+}
+
+.portfolio-title {
+  text-align: center;
+  margin: 40px 40px;
+  color: white;
+}
+
+.slider-container {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid #fff;
+  overflow: hidden;
+  min-height: 549px;
+  button {
+    position: absolute;
+    color: white;
+    z-index: 4;
+    font-size: 30px;
+    svg {
+      width: 50px;
+      height: 50px;
+      path {
+        transition: $Transition;
+      }
+    }
+    &:hover {
+      svg {
+        path {
+          stroke: $ColorText;
+        }
+      }
+    }
+    &.prev_btn {
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+    }
+    &.next_btn {
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.portfolio-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+}
+
+.portfolio-img {
+  position: absolute;
+  width: 400px;
+  opacity: 0;
+  transition: $Transition;
+  // transform: translateX(418px);
+  // z-index: -55555555555;
+}
+
+.portfolio-img.active {
+  opacity: 1;
+  transform: translateX(0);
+  // z-index: 5555555555555;
+  // transform: scale(1);
+}
